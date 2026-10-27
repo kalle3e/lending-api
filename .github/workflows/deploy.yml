@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 env:
-  AZURE_WEBAPP_NAME: kathie-lending-api   # <-- your App Service name
+  AZURE_WEBAPP_NAME:lending-api   # <-- your App Service name
   DOTNET_VERSION: '8.0.x'
 
 jobs:
