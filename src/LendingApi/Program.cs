@@ -18,7 +18,7 @@ builder.Services.AddDbContext<LendingContext>(options =>
     if (string.IsNullOrWhiteSpace(connectionString))
         options.UseInMemoryDatabase("LendingDb");
     else
-        options.UseSqlServer(connectionString);
+        options.UseSqlServer(connectionString, sql => sql.EnableRetryOnFailure());
 });
 
 builder.Services.AddScoped<LoanValidationService>();
